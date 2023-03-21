@@ -16,7 +16,7 @@
 
 ### Ejercicio: Usar funciones integradas (ArmstrongCard.Page.al.)
 
-![GIF1](recursos/foto.png)
+![GIF1](recursos/foto.PNG)
 
 ### Ejercicio: Eventos y desencadenadores (Validations.CodeUnit.al.)
 
