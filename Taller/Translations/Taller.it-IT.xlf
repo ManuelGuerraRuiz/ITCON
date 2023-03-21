@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="en-US" original="Taller">
+  <file datatype="xml" source-language="en-US" target-language="it-IT" original="Taller">
     <body>
       <group id="body">
         <trans-unit id="Table 3441387428 - NamedType 3898810523" size-unit="char" translate="yes" xml:space="preserve">
@@ -35,37 +35,44 @@
         </trans-unit>
         <trans-unit id="Table 4123507668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Vista general del cliente</source>
-          <note from="Developer" annotates="general" priority="2">Panoramica del cliente</note>
+          <target-language>Panoramica del cliente</target-language>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Vista_general_del_cliente - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4123507668 - Field 3310425443 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Codigo de Origen</source>
-          <note from="Developer" annotates="general" priority="2">Codice sorgente</note>
+          <target-language>Codice sorgente</target-language>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Vista_general_del_cliente - Field CodigoOrigen - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4123507668 - Field 2272012708 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Importe</source>
-          <note from="Developer" annotates="general" priority="2">Quantità</note>
+          <target-language>Quantità</target-language>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Vista_general_del_cliente - Field Importe - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4123507668 - Field 2578636657 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Run Date</source>
-          <note from="Developer" annotates="general" priority="2">Data dell ultima esecuzione</note>
+          <target-language>Data dell'ultima esecuzione</target-language>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Vista_general_del_cliente - Field LastRunDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4123507668 - Field 2726740135 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nombres de Clientes</source>
-          <note from="Developer" annotates="general" priority="2">Nomi dei clienti</note>
+          <target-language>Nomi dei clienti</target-language>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Vista_general_del_cliente - Field NombreCliente - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4123507668 - Field 2876776014 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Numero de Clientes</source>
-          <note from="Developer" annotates="general" priority="2">Numero di clienti</note>
+          <target-language>Numero di clienti</target-language>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Vista_general_del_cliente - Field NumeroCliente - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4123507668 - Field 2431532537 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Numero de Movimientos</source>
-          <note from="Developer" annotates="general" priority="2">Numero di movimenti</note>
+          <target-language>Numero di movimenti</target-language>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Vista_general_del_cliente - Field NumeroMovimiento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3661463883 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

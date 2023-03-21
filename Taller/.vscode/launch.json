@@ -13,7 +13,7 @@
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
-            "tenant": "CRMbc948629.onmicrosoft.com",
+            "tenant": "MGR245235.onmicrosoft.com",
             "schemaUpdateMode": "Recreate"
         }
     ]

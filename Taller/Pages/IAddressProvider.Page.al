@@ -39,7 +39,7 @@ page 50166 MyAddress
             {
                 ApplicationArea = All;
                 Image = Home;
-                Caption = 'Seleccinado Casa.';
+                Caption = 'Seleccionado Casa.';
                 ToolTip = 'Esta es la interfaz de Casa.';
                 trigger OnAction()
                 begin
@@ -64,8 +64,8 @@ page 50166 MyAddress
 
     local procedure AddressproviderFactory(var iAddressProvider: Interface IAddressProvider)
     var
-        CompanyAddressProvider: Codeunit CompanyAddressProvider;
-        PrivateAddressProvider: Codeunit PrivateAddressProvider;
+        CompanyAddressProvider: Codeunit CompanyAddressProvider_MGR;
+        PrivateAddressProvider: Codeunit PrivateAddressProvider_MGR;
     begin
 
         if sendTo = sendTo::Company then
