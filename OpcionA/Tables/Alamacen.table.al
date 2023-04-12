@@ -24,27 +24,32 @@ table 50401 Almacen
         field(50403; ItemNo; Code[20])
         {
             DataClassification = ToBeClassified;
+            TableRelation = Item;
 
         }
         field(50404; VariantCode; Code[10])
         {
             DataClassification = ToBeClassified;
+            TableRelation = "Item Variant";
 
         }
         field(50405; Description; Text[50])
         {
             DataClassification = ToBeClassified;
+            Editable = true;
 
         }
         field(50406; Location; Code[10])
         {
             DataClassification = ToBeClassified;
+            TableRelation = Almacen;
 
 
         }
         field(50407; Bin; Code[20])
         {
             DataClassification = ToBeClassified;
+            TableRelation = Location;
 
 
         }
@@ -69,7 +74,6 @@ table 50401 Almacen
         field(50411; Posted; Boolean)
         {
             DataClassification = ToBeClassified;
-
 
         }
     }

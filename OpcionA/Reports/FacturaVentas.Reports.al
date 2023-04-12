@@ -12,7 +12,7 @@ report 50403 ReportFactura
             {
 
             }
-            column(FechaRegistro; "Posting Date")
+            column(FechaRegistro; Format("Posting Date", 0, '<Closing><Day,2>/<Month,2>/<Year>'))
             {
 
             }
@@ -24,7 +24,7 @@ report 50403 ReportFactura
             {
 
             }
-            column(Vencimiento; "Due Date")
+            column(Vencimiento; Format("Due Date", 0, '<Closing><Day,2>/<Month,2>/<Year>'))
             {
 
             }
@@ -37,6 +37,7 @@ report 50403 ReportFactura
             {
                 DataItemLinkReference = Cliente;
                 DataItemLink = "Document No." = field("No.");
+
 
                 column(CodProducto; "No.")
                 {
@@ -77,6 +78,21 @@ report 50403 ReportFactura
                 {
 
                 }
+                column(Descuento; "Line Discount %")
+                {
+
+                }
+
+                trigger OnAfterGetRecord()
+                var
+                    myInt: Integer;
+
+                begin
+                    if Type.AsInteger() = 0 then
+                        CurrReport.Skip()
+
+
+                end;
 
 
             }
@@ -129,4 +145,6 @@ report 50403 ReportFactura
 
     var
         myInt: Integer;
+
+
 }
