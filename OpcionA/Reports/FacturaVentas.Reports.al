@@ -38,7 +38,10 @@ report 50403 ReportFactura
                 DataItemLinkReference = Cliente;
                 DataItemLink = "Document No." = field("No.");
 
+                column(Line_No_; "Line No.")
+                {
 
+                }
                 column(CodProducto; "No.")
                 {
 
@@ -82,6 +85,16 @@ report 50403 ReportFactura
                 {
 
                 }
+                dataitem(Cuenta; "Customer Bank Account")
+                {
+                    DataItemLinkReference = Cliente;
+                    DataItemLink = "Customer No." = field("Sell-to Customer No.");
+
+                    column(IBAN; Format(IBAN))
+                    {
+
+                    }
+                }
 
                 trigger OnAfterGetRecord()
                 var
@@ -96,6 +109,13 @@ report 50403 ReportFactura
 
 
             }
+
+            trigger OnAfterGetRecord()
+            var
+                myInt: Integer;
+            begin
+
+            end;
         }
 
 
@@ -145,6 +165,8 @@ report 50403 ReportFactura
 
     var
         myInt: Integer;
+
+        ibancito: Record "AAD Application";
 
 
 }

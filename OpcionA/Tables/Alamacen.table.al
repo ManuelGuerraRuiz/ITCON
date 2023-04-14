@@ -38,6 +38,14 @@ table 50401 Almacen
             DataClassification = ToBeClassified;
             Editable = true;
 
+            trigger OnValidate()
+            var
+                myInt: Integer;
+                Item: Record Item;
+            begin
+
+            end;
+
         }
         field(50406; Location; Code[10])
         {
