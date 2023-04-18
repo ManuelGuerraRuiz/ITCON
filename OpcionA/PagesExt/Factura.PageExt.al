@@ -14,6 +14,8 @@ pageextension 50403 Reporte extends "Sales Invoice list"
                 Caption = 'Factura detallada';
                 ApplicationArea = All;
                 Image = PrintReport;
+                Visible = Activado;
+
 
                 trigger OnAction()
                 var
@@ -30,6 +32,15 @@ pageextension 50403 Reporte extends "Sales Invoice list"
 
     }
 
+    trigger OnOpenPage()
     var
-        myInt: Integer;
+        BotonActivado: Codeunit Botoncito;
+    begin
+        Activado := BotonActivado.Visto();
+
+    end;
+
+    var
+
+        Activado: Boolean;
 }

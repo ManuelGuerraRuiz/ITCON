@@ -90,10 +90,23 @@ report 50403 ReportFactura
                     DataItemLinkReference = Cliente;
                     DataItemLink = "Customer No." = field("Sell-to Customer No.");
 
-                    column(IBAN; Format(IBAN))
+                    column(IBAN; ibancito)
                     {
 
                     }
+                    trigger OnAfterGetRecord()
+                    var
+                        LengthIban: Integer;
+                        Sub: Text;
+                    begin
+                        ibancito := IBAN;
+                        LengthIban := Text.StrLen(ibancito);
+                        Sub := ibancito.Substring(1, LengthIban - 4);
+                        ibancito := ibancito.Replace(Sub, '****');
+
+
+                    end;
+
                 }
 
                 trigger OnAfterGetRecord()
@@ -110,12 +123,8 @@ report 50403 ReportFactura
 
             }
 
-            trigger OnAfterGetRecord()
-            var
-                myInt: Integer;
-            begin
 
-            end;
+
         }
 
 
@@ -166,7 +175,7 @@ report 50403 ReportFactura
     var
         myInt: Integer;
 
-        ibancito: Record "AAD Application";
+        ibancito: Text;
 
 
 }
