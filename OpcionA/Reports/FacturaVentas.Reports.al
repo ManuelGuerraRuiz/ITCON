@@ -68,7 +68,7 @@ report 50403 ReportFactura
                 {
 
                 }
-                column(TipoIva; "VAT %")
+                column(TipoIva; "VAT %" / 100)
                 {
 
                 }
@@ -81,7 +81,11 @@ report 50403 ReportFactura
                 {
 
                 }
-                column(Descuento; "Line Discount %")
+                column(Descuento; "Line Discount %" / 100)
+                {
+
+                }
+                column(Ud; "Unit of Measure Code")
                 {
 
                 }

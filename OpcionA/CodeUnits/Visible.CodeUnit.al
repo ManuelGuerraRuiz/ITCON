@@ -6,7 +6,7 @@ codeunit 50405 Botoncito
     end;
 
     /// <summary>
-    /// Boton para activar o desactivar el informe
+    /// Boton para activar o desactivar el informe de la pagina Sales Invoice Y la ficha 
     /// </summary>
     /// <returns></returns>
     procedure Visto(): Boolean
