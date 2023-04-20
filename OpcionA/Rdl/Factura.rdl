@@ -949,6 +949,8 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
+            <RepeatColumnHeaders>true</RepeatColumnHeaders>
+            <RepeatRowHeaders>true</RepeatRowHeaders>
             <DataSetName>DataSet_Result</DataSetName>
             <Top>0.45852cm</Top>
             <Left>0.26704cm</Left>
@@ -964,16 +966,16 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>5.18154cm</Width>
+                  <Width>5.59639cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.34837cm</Width>
+                  <Width>4.76322cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.34837cm</Width>
+                  <Width>4.76322cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.79578cm</Width>
+                  <Width>5.21063cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1467,10 +1469,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>6.66693cm</Top>
-            <Left>1.14987cm</Left>
+            <Top>18.19288cm</Top>
+            <Left>0.26704cm</Left>
             <Height>1.8cm</Height>
-            <Width>18.67406cm</Width>
+            <Width>20.33346cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1667,7 +1669,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>9.58794cm</Top>
+            <Top>21.11389cm</Top>
             <Left>7.55478cm</Left>
             <Height>1.2cm</Height>
             <Width>6.25cm</Width>
@@ -1679,7 +1681,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>12.33733cm</Height>
+        <Height>22.81483cm</Height>
         <Style />
       </Body>
       <Width>20.79993cm</Width>
@@ -1997,6 +1999,12 @@ du/IB4nKCvZgtjO60ZdhxZDnK/b4SA+xFAFRlf6qCrHRxRYQqbzxbfL8NW/qSI0A8v2zPC5ZPt9bJHb6
         </Field>
         <Field Name="Importe2Format">
           <DataField>Importe2Format</DataField>
+        </Field>
+        <Field Name="total">
+          <DataField>total</DataField>
+        </Field>
+        <Field Name="totalFormat">
+          <DataField>totalFormat</DataField>
         </Field>
         <Field Name="Descuento">
           <DataField>Descuento</DataField>

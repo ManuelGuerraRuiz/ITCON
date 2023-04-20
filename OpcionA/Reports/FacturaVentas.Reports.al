@@ -56,39 +56,55 @@ report 50403 ReportFactura
                 }
                 column(Precio; "Unit Price")
                 {
-
+                    AutoFormatType = 10;
+                    AutoFormatExpression = '<precision, 2:2><standard format, 0>€';
                 }
                 column(Importe; "Line Amount")
                 {
-
+                    AutoFormatType = 10;
+                    AutoFormatExpression = '<precision, 2:2><standard format, 0>€';
                 }
 
 
                 column(BaseImponible; "VAT Base Amount")
                 {
-
+                    AutoFormatType = 10;
+                    AutoFormatExpression = '<precision, 2:2><standard format, 0>€';
                 }
                 column(TipoIva; "VAT %" / 100)
                 {
-
+                    AutoFormatType = 10;
+                    AutoFormatExpression = '<precision, 0:2><standard format,0>%';
                 }
                 column(CuotaIva; "Amount Including VAT" - "VAT Base Amount")
                 {
-
+                    AutoFormatType = 10;
+                    AutoFormatExpression = '<precision, 2:2><standard format, 0>€';
                 }
 
                 column(Importe2; "Amount Including VAT")
                 {
+                    AutoFormatType = 10;
+                    AutoFormatExpression = '<precision, 2:2><standard format, 0>€';
 
+                }
+
+                column(total; total)
+                {
+                    AutoFormatType = 10;
+                    AutoFormatExpression = '<precision, 2:2><standard format, 0>€';
                 }
                 column(Descuento; "Line Discount %" / 100)
                 {
-
+                    AutoFormatType = 10;
+                    AutoFormatExpression = '<precision, 0:2><standard format,0>%';
                 }
+
                 column(Ud; "Unit of Measure Code")
                 {
 
                 }
+
                 dataitem(Cuenta; "Customer Bank Account")
                 {
                     DataItemLinkReference = Cliente;
@@ -115,14 +131,21 @@ report 50403 ReportFactura
 
                 trigger OnAfterGetRecord()
                 var
-                    myInt: Integer;
+                    SL: Record "Sales Line";
 
                 begin
                     if Type.AsInteger() = 0 then
-                        CurrReport.Skip()
+                        CurrReport.Skip();
+
+                    SL.SetFilter("Document No.", "Document No.");
+                    repeat begin
+                        total += SL."Amount Including VAT"
+                    end until SL.Next() = 0;
+
 
 
                 end;
+
 
 
             }
@@ -180,6 +203,8 @@ report 50403 ReportFactura
         myInt: Integer;
 
         ibancito: Text;
+
+        total: Decimal;
 
 
 }

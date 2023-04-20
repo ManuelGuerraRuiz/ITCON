@@ -11,7 +11,7 @@ pageextension 50405 Detallada extends "Sales Invoice"
         {
             action(boton)
             {
-                Caption = 'Factura detallada';
+                Caption = 'Factura detallada MGR';
                 ApplicationArea = All;
                 Image = PrintReport;
                 Visible = Activado;

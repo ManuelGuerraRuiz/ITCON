@@ -11,10 +11,11 @@ pageextension 50403 Reporte extends "Sales Invoice list"
         {
             action(boton)
             {
-                Caption = 'Factura detallada';
+                Caption = 'Factura detallada MGR';
                 ApplicationArea = All;
                 Image = PrintReport;
                 Visible = Activado;
+
 
 
                 trigger OnAction()
@@ -23,7 +24,8 @@ pageextension 50403 Reporte extends "Sales Invoice list"
                 begin
                     vuelta.Reset();
                     CurrPage.SetSelectionFilter(vuelta);
-                    report.Run(Report::ReportFactura, true, true, vuelta);
+                    if vuelta.FindSet() then
+                        report.Run(Report::ReportFactura, true, true, vuelta);
                 end;
 
             }
