@@ -8,6 +8,20 @@ codeunit 50406 Eventos
     var
         myInt: Integer;
 
+    [EventSubscriber(ObjectType::Page, Page::"Sales Invoice", 'OnBeforeActionEvent', 'Post', true, true)]
+    local procedure MyProcedure()
+    var
+        fecha: Record "Sales Line";
+    begin
+        if fecha.FechaDisponibleManuel = 0D then begin
+            if Confirm('Quieres Facturar sin Fecha Disponibilidad MGR', true, fecha.FechaDisponibleManuel) then
+                exit
+            else begin
+                exit
+            end;
+        end;
+    end;
+
 
 
 

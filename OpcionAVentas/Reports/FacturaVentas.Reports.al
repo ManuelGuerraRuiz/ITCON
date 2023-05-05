@@ -105,16 +105,11 @@ report 50403 ReportFactura
 
                 }
 
-                dataitem(Item; Item)
+                column(FechaDisponibleManuel; Format(FechaDisponibleManuel, 0, '<Closing><Day,2>/<Month,2>/<Year>'))
                 {
-                    DataItemLinkReference = Producto;
-                    DataItemLink = "No." = field("No.");
 
-                    column(PedidosDis; PedidosDis)
-                    {
-
-                    }
                 }
+
 
                 dataitem(Cuenta; "Customer Bank Account")
                 {
@@ -149,22 +144,18 @@ report 50403 ReportFactura
                         CurrReport.Skip();
 
                     SL.SetFilter("Document No.", "Document No.");
+                    if FechaDisponibleManuel = 0D then
+                        CurrReport.Skip();
+
                     repeat begin
                         total += SL."Amount Including VAT"
                     end until SL.Next() = 0;
 
-
-
                 end;
-
-
 
             }
 
-
-
         }
-
 
     }
 

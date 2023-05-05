@@ -22,10 +22,10 @@
                   <Width>1.95525cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>5.96495cm</Width>
+                  <Width>5.59479cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.1875cm</Width>
+                  <Width>2.43941cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.95525cm</Width>
@@ -452,7 +452,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Pedidos</Value>
+                                  <Value>Fecha Dis</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -746,14 +746,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="PedidosDis">
+                        <Textbox Name="FechaDisponibleManuel">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIf(Fields!PedidosDis.Value = 0 , " ",Fields!PedidosDis.Value)</Value>
+                                  <Value>=Fields!FechaDisponibleManuel.Value</Value>
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Normal</FontWeight>
@@ -766,7 +766,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>PedidosDis</rd:DefaultName>
+                          <rd:DefaultName>FechaDisponibleManuel</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1031,10 +1031,10 @@
             <RepeatColumnHeaders>true</RepeatColumnHeaders>
             <RepeatRowHeaders>true</RepeatRowHeaders>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.45852cm</Top>
+            <Top>0.55029cm</Top>
             <Left>0.26704cm</Left>
             <Height>4.4393cm</Height>
-            <Width>20.33346cm</Width>
+            <Width>20.21521cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1760,10 +1760,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>22.81483cm</Height>
+        <Height>22.31389cm</Height>
         <Style />
       </Body>
-      <Width>21.005cm</Width>
+      <Width>20.8145cm</Width>
       <Page>
         <PageFooter>
           <Height>2.68533cm</Height>
@@ -2094,8 +2094,8 @@ du/IB4nKCvZgtjO60ZdhxZDnK/b4SA+xFAFRlf6qCrHRxRYQqbzxbfL8NW/qSI0A8v2zPC5ZPt9bJHb6
         <Field Name="Ud">
           <DataField>Ud</DataField>
         </Field>
-        <Field Name="PedidosDis">
-          <DataField>PedidosDis</DataField>
+        <Field Name="FechaDisponibleManuel">
+          <DataField>FechaDisponibleManuel</DataField>
         </Field>
         <Field Name="IBAN">
           <DataField>IBAN</DataField>
