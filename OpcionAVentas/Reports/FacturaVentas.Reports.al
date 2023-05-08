@@ -190,7 +190,7 @@ report 50403 ReportFactura
         layout(RDLC)
         {
             Type = RDLC;
-            LayoutFile = './Rdl/Factura.rdl';
+            LayoutFile = './Rdl/Factura2.rdl';
         }
 
         layout(Word)
