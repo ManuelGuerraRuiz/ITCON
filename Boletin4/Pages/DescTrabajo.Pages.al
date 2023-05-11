@@ -7,7 +7,7 @@ page 50405 DescripcionTrabajo
     UsageCategory = Lists;
     SourceTable = "Sales Invoice Header";
     Caption = 'Modificar descripcion del trabajo';
-
+    Permissions = tabledata "Sales Invoice Header" = M;
 
     layout
     {
@@ -15,7 +15,7 @@ page 50405 DescripcionTrabajo
         {
             group(GroupName)
             {
-                field("Work Description"; Rec."Work Description")
+                field("Work Description"; desc1)
                 {
                     Caption = 'Descripcion Actual';
                     ApplicationArea = All;
@@ -28,10 +28,7 @@ page 50405 DescripcionTrabajo
                     ApplicationArea = All;
                     Editable = true;
                 }
-
-
             }
-
         }
     }
 
@@ -53,7 +50,36 @@ page 50405 DescripcionTrabajo
         }
     }
 
+    trigger OnAfterGetRecord()
+    var
+        leer: InStream;
+    begin
+        desc1 := '';
+        Rec.CalcFields("Work Description");
+        if Rec."Work Description".HasValue then begin
+            Rec."Work Description".CreateInStream(leer);
+            leer.ReadText(desc1);
+        end
+        else
+            desc1 := '';
+    end;
+
+    trigger OnQueryClosePage(CloseAction: Action): Boolean
+    var
+        escribir: OutStream;
+    begin
+        if CloseAction in [ACTION::Cancel, ACTION::LookupCancel] then
+            exit
+        else begin
+            Clear(Rec."Work Description");
+            Rec."Work Description".CreateOutStream(escribir, TEXTENCODING::UTF8);
+            escribir.WriteText(desc);
+            Rec.Modify(true);
+        end;
+    end;
+
     var
         myInt: Integer;
         desc: Text[200];
+        desc1: Text[200];
 }

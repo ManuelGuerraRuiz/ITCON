@@ -16,16 +16,13 @@ pageextension 50409 Modificar extends "Posted Sales Invoice"
                 ApplicationArea = All;
                 Image = Workflow;
                 Visible = Activado;
-                /*RunObject = Page DescripcionTrabajo;
-                RunPageLink = "No." = FIELD("No.");*/
+                RunObject = Page DescripcionTrabajo;
+                RunPageLink = "No." = FIELD("No.");
 
                 trigger OnAction()
                 var
                     paginita: Page DescripcionTrabajo;
-                    select: Record "Sales Invoice Header";
                 begin
-                    select.Reset();
-                    CurrPage.SetSelectionFilter(select);
                     paginita.Run();
                 end;
 
