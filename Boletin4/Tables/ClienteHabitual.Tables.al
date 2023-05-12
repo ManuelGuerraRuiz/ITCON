@@ -12,16 +12,16 @@ table 50410 Habitual
         field(504010; Desde; Date)
         {
             DataClassification = ToBeClassified;
-
-
-
         }
         field(504012; Hasta; Date)
         {
             DataClassification = ToBeClassified;
 
-
-
+        }
+        field(504013; CodProdcuto; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = Item;
         }
     }
 
@@ -30,6 +30,10 @@ table 50410 Habitual
         key(PK; Cliente)
         {
             Clustered = true;
+        }
+        key(PK2; CodProdcuto)
+        {
+
         }
     }
 

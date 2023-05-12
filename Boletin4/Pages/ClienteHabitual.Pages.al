@@ -55,7 +55,8 @@ page 50410 ClienteHabitual
     }
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
-
+        fecha: Record "Sales Header";
+        producto: Record "Sales Line";
     begin
 
         if (Rec.Desde <> 0D) and (Rec.Hasta = 0D) then begin
@@ -64,5 +65,13 @@ page 50410 ClienteHabitual
         if (Rec.Hasta <> 0D) and (Rec.Desde = 0D) then begin
             Error('No puedes dejar una fecha  sin rellenar')
         end;
+        if (fecha."Posting Date" < Rec.Desde) and (fecha."Posting Date" > Rec.Hasta) then begin
+            producto."No." := 'Unfavorable';
+        end;
+
     end;
+
+
+
+
 }
