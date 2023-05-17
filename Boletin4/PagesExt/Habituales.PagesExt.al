@@ -15,13 +15,9 @@ pageextension 50410 ClienteHabitual extends "Item Card"
                 Caption = 'Clientes Habituales MGR';
                 ApplicationArea = All;
                 Image = PersonInCharge;
+                RunObject = Page ClienteHabitual;
+                RunPageLink = CodProdcuto = FIELD("No.");
 
-                trigger OnAction()
-                var
-                    pagina: Page ClienteHabitual;
-                begin
-                    pagina.Run();
-                end;
 
 
 

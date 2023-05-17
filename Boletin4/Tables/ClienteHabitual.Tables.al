@@ -27,14 +27,11 @@ table 50410 Habitual
 
     keys
     {
-        key(PK; Cliente)
+        key(PK; Cliente, CodProdcuto)
         {
             Clustered = true;
         }
-        key(PK2; CodProdcuto)
-        {
 
-        }
     }
 
     var

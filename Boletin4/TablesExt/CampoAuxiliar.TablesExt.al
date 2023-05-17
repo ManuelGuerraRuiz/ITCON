@@ -8,6 +8,7 @@ tableextension 50405 campoaux extends "Sales Line"
         }
     }
 
+
     var
         myInt: Integer;
 }
