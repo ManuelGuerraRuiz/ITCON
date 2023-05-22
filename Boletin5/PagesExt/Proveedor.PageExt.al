@@ -24,7 +24,6 @@ pageextension 50420 Boton extends "Vendor List"
                 ApplicationArea = All;
                 RunObject = page ProveedorTeamMember;
 
-
             }
         }
     }

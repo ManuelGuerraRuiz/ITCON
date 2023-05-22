@@ -93,20 +93,18 @@ page 50420 ProveedorTeamMember
 
     actions
     {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
 
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
     }
 
     var
         myInt: Integer;
+
+    trigger OnClosePage()
+    var
+        myInt: Integer;
+        crear: Codeunit CrearProveedor;
+        tabla: Record Proveedor;
+    begin
+        crear.crearProveedor(Rec);
+    end;
 }

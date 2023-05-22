@@ -1,6 +1,10 @@
 table 50420 Proveedor
+
 {
     DataClassification = ToBeClassified;
+    DataCaptionFields = codigo, Nombre;
+    DrillDownPageId = ProveedorTeamMember;
+
 
     fields
     {
@@ -147,6 +151,10 @@ table 50420 Proveedor
     var
         myInt: Integer;
         nose: Code[20];
+
+
+
+
 
     trigger OnInsert()
     begin
