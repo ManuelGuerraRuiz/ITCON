@@ -24,7 +24,7 @@ table 50420 Proveedor
         field(50422; CodComprador; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = Vendor;
+            TableRelation = "Salesperson/Purchaser";
             Caption = 'Cod.Comprador';
         }
 
@@ -133,6 +133,23 @@ table 50420 Proveedor
             DataClassification = ToBeClassified;
             Caption = 'Cod.terminos pago.';
             TableRelation = "Payment Terms";
+        }
+        field(50435; Procesado; Boolean)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(50436; CodigoContacto; code[20])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Codigo del contacto principal';
+            TableRelation = Contact;
+
+        }
+
+        field(50437; Contacto; Text[100])
+        {
+            DataClassification = ToBeClassified;
         }
     }
 

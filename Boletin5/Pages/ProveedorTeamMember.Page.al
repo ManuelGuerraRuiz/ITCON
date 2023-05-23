@@ -35,6 +35,8 @@ page 50420 ProveedorTeamMember
                     Editable = true;
 
                 }
+
+
             }
 
             group(DireccionYContacto)
@@ -64,6 +66,7 @@ page 50420 ProveedorTeamMember
                 {
                     ApplicationArea = ALl;
                 }
+
             }
             group(Facturación)
             {
@@ -98,13 +101,4 @@ page 50420 ProveedorTeamMember
 
     var
         myInt: Integer;
-
-    trigger OnClosePage()
-    var
-        myInt: Integer;
-        crear: Codeunit CrearProveedor;
-        tabla: Record Proveedor;
-    begin
-        crear.crearProveedor(Rec);
-    end;
 }

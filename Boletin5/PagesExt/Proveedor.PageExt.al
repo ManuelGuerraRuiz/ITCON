@@ -3,13 +3,7 @@ pageextension 50420 Boton extends "Vendor List"
     layout
     {
         // Add changes to page layout here
-        addbefore("No.")
-        {
-            field(Id; id.codigo)
-            {
-                ApplicationArea = ALl;
-            }
-        }
+
     }
 
     actions
@@ -30,5 +24,4 @@ pageextension 50420 Boton extends "Vendor List"
 
     var
         myInt: Integer;
-        id: Record Proveedor;
 }
