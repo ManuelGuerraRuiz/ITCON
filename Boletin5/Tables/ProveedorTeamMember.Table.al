@@ -160,6 +160,10 @@ table 50420 Proveedor
         {
             Clustered = true;
         }
+        key(Unico; telefono)
+        {
+            Unique = true;
+        }
 
 
     }

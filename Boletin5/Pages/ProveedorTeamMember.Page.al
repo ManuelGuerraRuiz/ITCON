@@ -6,6 +6,7 @@ page 50420 ProveedorTeamMember
     SourceTable = Proveedor;
     Editable = true;
     Permissions = tabledata Proveedor = RIMD;
+    Caption = 'Proveedores MGR';
 
 
     layout
